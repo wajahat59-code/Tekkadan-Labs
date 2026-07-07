@@ -1,0 +1,268 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h1 class="hero-title">Tekkadan Labs</h1>
+      <p class="hero-sub">Think Different. Do Different.</p>
+      <p class="hero-desc">
+        At Tekkadan, curiosity meets action. We’re a community of innovators who push boundaries,
+        explore unconventional ideas, and bring them to life.
+        From designing tech experiments to launching creative projects,
+        we equip you with the skills, mentorship, and freedom to experiment.
+      </p>
+
+      <div class="hero-cta">
+        <a href="{{ url_for('contact') }}" class="btn btn-primary">Join Tekkadan</a>
+        <a href="{{ url_for('about') }}" class="btn btn-ghost">Learn more</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>27</strong><span>Members</span>
+        </div>
+        <div class="stat">
+          <strong>4</strong><span>Projects</span>
+        </div>
+        <div class="stat">
+          <strong>8</strong><span>Scientific Fields</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="orbit-wrap">
+        <div class="atom" aria-hidden="true">
+          <div class="orbit"><span class="electron"></span></div>
+          <div class="orbit"><span class="electron"></span></div>
+          <div class="orbit"><span class="electron"></span></div>
+          <div class="core"></div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- hero-inner -->
+</section>
+<br><br><br><br>
+    <section class="preview-sections">
+  <div class="card" data-reveal>
+    <h3>AI & ML</h3>
+    <p>Exploring how machines learn, think, and make decisions.</p>
+  </div>
+  <div class="card" data-reveal>
+    <h3>Game Design & Simulations</h3>
+    <p>Study how humans interact with digital environments to create fun and meaningful experiences.</p>
+  </div>
+  <div class="card" data-reveal>
+    <h3>Space & Astronomy</h3>
+    <p>Investigating the mysteries beyond Earth — planets, stars, galaxies, and the origins of the universe.</p>
+  </div>
+  <div class="card" data-reveal>
+    <h3>Data Science & Statistics</h3>
+    <p>From decoding trends to predicting outcomes, learning how decisions are made in science, business, and daily life.</p>
+  </div>
+  <div class="card" data-reveal>
+    <h3>Theoretical & Applied Physics</h3>
+    <p>Understanding how the universe moves, from the smallest particle to the largest galaxy.</p>
+  </div>
+  <div class="card" data-reveal>
+    <h3>Environmental & Earth Sciences</h3>
+    <p>Studying our planet — its ecosystems, climate, and resources.</p>
+  </div>
+  <div class="card" data-reveal>
+    <h3>Digital Ethics</h3>
+    <p>Question the impact of technology — ensuring innovation respects privacy, fairness, and humanity.</p>
+  </div>
+  <div class="card" data-reveal>
+    <h3>Cognitive, Social & Behavioral Psychology</h3>
+    <p>Analyzing how humans think, learn, and interact.</p>
+  </div>
+</section
+<!-- PREVIEW SECTIONS -->
+<section class="slider-section">
+  <h2 class="slider-title">Explore Our Fields</h2>
+
+  <div class="slider-container">
+    <div class="card-stack" id="cardStack">
+      <!-- Card 1: AI & ML -->
+      <div class="card active" data-index="0">
+        <h3>AI & Machine Learning</h3>
+        <ul>
+          <li>How AI works (neural networks, decision trees, NLP, CV)</li>
+          <li>Training and evaluating ML models</li>
+          <li>Using Python libraries like Scikit-Learn, TensorFlow, PyTorch</li>
+          <li>Building real projects — prediction models, chatbots, classifiers</li>
+        </ul>
+      </div>
+
+      <!-- Card 2: Game Design -->
+      <div class="card next" data-index="1">
+        <h3>Game Design & Simulations</h3>
+        <ul>
+          <li>Learn principles of game mechanics, player psychology, and level design</li>
+          <li>Build interactive prototypes using Unity, Godot, or similar engines</li>
+          <li>Implement game physics, AI agents, and simulation loops</li>
+          <li>Create and iterate on UX, visual storytelling, and balancing systems</li>
+        </ul>
+      </div>
+
+      <!-- Card 3: Space -->
+      <div class="card hidden" data-index="2">
+        <h3>Space & Astronomy</h3>
+        <ul>
+          <li>Understand celestial mechanics, orbital dynamics, and basic astrophysics</li>
+          <li>Learn observational techniques: telescopes, imaging, and data reduction</li>
+          <li>Explore planetology, stellar evolution, and cosmology fundamentals</li>
+          <li>Work with real astronomical datasets and simulation tools</li>
+        </ul>
+      </div>
+
+      <!-- Card 4: Data Science -->
+      <div class="card hidden" data-index="3">
+        <h3>Data Science & Statistics</h3>
+        <ul>
+          <li>Master descriptive and inferential statistics for real data problems</li>
+          <li>Clean, visualize, and explore datasets using Python</li>
+          <li>Translate data insights into actionable recommendations and dashboards</li>
+          <li>Understand experiment design, A/B testing, and reproducible workflows</li>
+        </ul>
+      </div>
+
+      <!-- Card 5: Physics -->
+      <div class="card hidden" data-index="4">
+        <h3>Theoretical & Applied Physics</h3>
+        <ul>
+          <li>Develop strong foundations in classical mechanics, electromagnetism, and quantum basics</li>
+          <li>Apply mathematical methods to model physical systems</li>
+          <li>Use simulation tools for complex systems and experimental design</li>
+          <li>Gain problem-solving habits transferable to engineering and research projects</li>
+        </ul>
+      </div>
+
+      <!-- Card 6: Environmental -->
+      <div class="card hidden" data-index="5">
+        <h3>Environmental & Earth Sciences</h3>
+        <ul>
+          <li>Learn ecosystem structure, biogeochemical cycles, and Earth system interactions</li>
+          <li>Study climate science, weather patterns, and anthropogenic impacts</li>
+          <li>Collect and analyze field and remote-sensing data (GIS basics)</li>
+          <li>Design sustainable solutions and evaluate environmental risks</li>
+        </ul>
+      </div>
+
+      <!-- Card 7: Digital Ethics -->
+      <div class="card hidden" data-index="6">
+        <h3>Digital Ethics</h3>
+        <ul>
+          <li>Explore privacy, fairness, transparency, and accountability in tech</li>
+          <li>Learn frameworks for ethical design and responsible AI development</li>
+          <li>Analyze real case studies of bias, surveillance, and consent</li>
+          <li>Practice translating ethical principles into product decisions and policy proposals</li>
+        </ul>
+      </div>
+
+      <!-- Card 8: Psychology -->
+      <div class="card hidden" data-index="7">
+        <h3>Cognitive, Social & Behavioral Psychology</h3>
+        <ul>
+          <li>Understand cognitive processes: attention, memory, learning, and decision-making</li>
+          <li>Study social influences, group dynamics, and interpersonal behavior</li>
+          <li>Design and run behavioral experiments and surveys; analyze results statistically</li>
+          <li>Apply psychological principles to UX, education, and human-centered design</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="slider-nav">
+    <button class="nav-btn" id="prevBtn">
+      <i class="fas fa-chevron-left"></i> Previous
+    </button>
+    <button class="nav-btn" id="nextBtn">
+      Next <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+</section>
+<br><br>
+<!-- QUOTES SECTION -->
+<section class="quotes-section">
+  <div class="quote-container">
+    <span id="quote"></span><span class="cursor">|</span>
+  </div>
+</section>
+<br><br><br><br><br><br>
+
+
+<section id="global-presence">
+  <h2>Our Global Presence</h2><br>
+    <p>Tekkadan's community and influence extend far beyond borders.
+        From Asia to Europe, Africa, and the Americas, we’ve built a
+        diverse network of passionate researchers, innovators, and creators. With active members and collaborators all over the world,
+        Tekkadan continues to grow into a truly international organization. Our global reach strengthens our
+        vision—uniting curious minds from around the world to
+        explore science, technology, and creative innovation together.
+    </p>
+  <div id="chartdiv"></div>
+</section>
+<section class="elaboration" id="game">
+
+
+
+
+<section class="arc-counter-section">
+  <div class="counter-box">
+    <i class="fa-solid fa-briefcase"></i>
+    <p>Projects Done</p>
+    <span class="counter" data-target="27">0</span>
+  </div>
+
+  <div class="counter-box">
+    <i class="fa-solid fa-users"></i>
+    <p>Active Members</p>
+    <span class="counter" data-target="712">0</span>
+  </div>
+
+  <div class="counter-box">
+    <i class="fa-solid fa-mug-hot"></i>
+    <p>Support Coffees</p>
+    <span class="counter" data-target="359">0</span>
+  </div>
+
+  <div class="counter-box">
+    <i class="fa-solid fa-code"></i>
+    <p>Lines Of Code</p>
+    <span class="counter" data-target="12417">0</span>
+  </div>
+</section>
+
+<section class="arc-counter-section">
+  <div class="counter-box">
+    <i class="fa-solid fa-earth-americas"></i>
+    <p>Countries Reached</p>
+    <span class="counter" data-target="10">0</span>
+  </div>
+
+  <div class="counter-box">
+    <i class="fa-solid fa-handshake"></i>
+    <p>Collaborations</p>
+    <span class="counter" data-target="4">0</span>
+  </div>
+
+  <div class="counter-box">
+    <i class="fa-solid fa-calendar-check"></i>
+    <p>Events</p>
+    <span class="counter" data-target="6">0</span>
+  </div>
+
+  <div class="counter-box">
+    <i class="fa-solid fa-graduation-cap"></i>
+    <p>Students Trained</p>
+    <span class="counter" data-target="801">0</span>
+  </div>
+</section>
+
+
+
+
+{% endblock %}

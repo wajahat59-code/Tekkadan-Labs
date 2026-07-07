@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+  <meta charset="UTF-8">
+  <title>Tekkadan Sign Up</title>
+</head>
+<div class="arc-auth">
+  <div class="container">
+      <h2 class="form-title">Sign Up</h2>
+        <p class="bottom-link">
+      Already have an account? <a href="{{ url_for('signin') }}">Login</a>
+    </p>
+
+      <!-- Signup Form -->
+      <form class="signup-form">
+          <div class="form-group">
+              <input type="text" class="input" placeholder="Full Name" required>
+              <input type="text" class="input" placeholder="Username" required>
+          </div>
+          <div class="form-group">
+              <input type="email" class="input" placeholder="Email" required>
+              <input type="password" class="input" placeholder="Password" required>
+          </div>
+          <div class="form-group">
+              <input type="number" class="input" placeholder="Age" required>
+              <input type="text" class="input" placeholder="Country" required>
+          </div>
+          <!-- Q7 - Membership Path -->
+        <div class="form-group full">
+            <label class="label">Which path are you applying for?</label>
+            <div class="radio-group">
+                <label><input type="radio" name="path" value="member"> Member</label>
+                <label><input type="radio" name="path" value="student"> Student</label>
+                <label><input type="radio" name="path" value="collab"> Collaborator</label>
+                <label><input type="radio" name="path" value="researcher"> Researcher</label>
+                <label><input type="radio" name="path" value="volunteer"> Volunteer</label>
+            </div>
+        </div>
+
+        <!-- Q11 - Skills (Choose up to 3) -->
+        <div class="form-group full">
+            <label class="label">What skills do you have? (Choose up to 3)</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="skills" value="coding"> Coding</label>
+                <label><input type="checkbox" name="skills" value="design"> Design</label>
+                <label><input type="checkbox" name="skills" value="leadership"> Leadership</label>
+                <label><input type="checkbox" name="skills" value="research"> Research</label>
+                <label><input type="checkbox" name="skills" value="marketing"> Marketing & HR</label>
+                <label><input type="checkbox" name="skills" value="strategy"> Strategy & Finance</label>
+            </div>
+        </div>
+
+        <!-- Q12 - Interests (Choose up to 3) -->
+        <div class="form-group full">
+            <label class="label">Which areas interest you? (Choose up to 3)</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="areas" value="aiml"> AI & ML</label>
+                <label><input type="checkbox" name="areas" value="gamedev"> Game Design & Simulations</label>
+                <label><input type="checkbox" name="areas" value="space"> Space & Astronomy</label>
+                <label><input type="checkbox" name="areas" value="datasci"> Data Science & Statistics</label>
+                <label><input type="checkbox" name="areas" value="physics"> Theoretical & Applied Physics</label>
+                <label><input type="checkbox" name="areas" value="earth"> Environmental & Earth Sciences</label>
+                <label><input type="checkbox" name="areas" value="ethics"> Digital Ethics</label>
+                <label><input type="checkbox" name="areas" value="psychology"> Cognitive, Social & Behavioral Psychology</label>
+            </div>
+        </div>
+
+        <!-- Q14 - Tekkadan Values (Choose up to 3) -->
+        <div class="form-group full">
+            <label class="label">Which Tekkadan values resonate with you? (Choose up to 3)</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="values" value="Diverse Community"> Diverse Community</label>
+                <label><input type="checkbox" name="values" value="Research"> Research</label>
+                <label><input type="checkbox" name="values" value="innovation"> Innovation</label>
+                <label><input type="checkbox" name="values" value="Multi-Disciplinary"> Multi-Disciplinary</label>
+                <label><input type="checkbox" name="values" value="Educating Young Generation"> Educating Young Generation</label>
+            </div>
+        </div>
+
+        <!-- Q16 - Discovery -->
+        <div class="form-group full">
+            <label class="label">How did you discover Tekkadan?</label>
+            <select class="select">
+                <option value="friend">Friend</option>
+                <option value="social">Social Media</option>
+                <option value="school">School / University</option>
+                <option value="search">Online Search</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <!-- Self Rating -->
+        <div class="form-group full">
+            <label class="label">Self Rating</label>
+
+            <label>Coding</label>
+            <input type="range" min="0" max="10" value="0" step="0.1" class="slider">
+
+            <label>Creativity</label>
+            <input type="range" min="0" max="10" value="0" step="0.1" class="slider">
+
+            <label>Leadership</label>
+            <input type="range" min="0" max="10" value="0" step="0.1" class="slider">
+
+            <label>Discipline</label>
+            <input type="range" min="0" max="10" value="0" step="0.1" class="slider">
+        </div>
+          <textarea class="textarea" placeholder="Why are you joining Tekkadan?" rows="2" required></textarea>
+          <textarea class="textarea" placeholder="Anything else you want to tell us?" rows="2" required></textarea>
+
+          <input type="submit" class="btn" value="Signup">
+      </form>
+
+
+  </div>
+</div>
+{% endblock %}
