@@ -137,7 +137,4 @@ Team
 
 Rawalpindi, Pakistan
 
-## 🔗 Connect
 
-- Instagram: [@yuozhe](https://www.instagram.com/yuozhe)
-- Kaggle: [stealthtechnologies](https://www.kaggle.com/stealthtechnologies)
